@@ -1,0 +1,11 @@
+<div [class]="product.onsale ? 'product-container-onsale' : 'product-container'">
+   <p> <button (click)="toggleOnSale()">{{buttonText}}</button> </p>
+    <div class="product-image">
+        <img [src]="product.image">
+    </div>
+    <div class="product-info-container">
+        <div class="name">{{product.name}}</div>
+        <div class="price">$ {{product.displayPrice}}</div> 
+        <div *ngIf="product.onsale" class="onsale">ON SALE!</div>
+    </div>
+</div>
